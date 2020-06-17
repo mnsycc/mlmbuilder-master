@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  div(class="container")
+    div(class="reg_box")
+      h1(class="reg_text") Registration
+      div(class="username")
+        input(type="text" name="username" value="" class="form_username" placeholder="Username")
+      div(class="name")
+        input(type="text" name="name" value="" class="form_name" placeholder="Name")
+      div(class="surname")
+        input(type="text" name="surname" value="" class="form_surname" placeholder="Surname")
+      div(class="email")
+        input(type="email" name="email" value="" class="form_email" placeholder="Email")
+      div(class="phone")
+        input(type="text" name="phone" value="" class="form_phone" placeholder="Phone")
+      div(class="parent") Lead
+        br
+        input(type="text" name="parent" value="" class="form_parent_name" placeholder="Name")
+        input(type="text" name="parent" value="" class="form_parent_surname" placeholder="Surname")
+      div(class="company")
+        br
+        input(type="text" name="company" value="" class="form_company" placeholder="Company")
+      button(type="submit" name="button" class="form_btn") Submit
+  link(rel='stylesheet', href='/stylesheets/login.css')
+  script(src='/javascripts/main.js')

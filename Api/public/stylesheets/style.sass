@@ -1,0 +1,139 @@
+@import "./fonts.sass"
+p
+  font: 15px "Manrope"
+a
+  text-decoration: none
+  color: #ffffff
+  transition: 0.2s
+a:hover
+  color: #000000
+  transition: 0.2s
+button
+  border-radius: 45px
+  background: #ffcc9900
+  border: 1px solid #ffffff5c 
+  font: 20px "Manrope"
+  text-align: center
+  margin: 0px auto
+  height: 60%
+  user-select: none
+  text-decoration: none
+  outline: none
+  transition: 0.2s
+button:hover
+  background: #ffffff93
+  border: 1px solid #ffffff5c  
+  transition: 0.2s
+.circle
+  background: #fdc5b2
+  border-radius: 100%
+  width: 100px
+  height: 100px
+  text-align: center
+  margin: 50px auto
+div.container
+  width: 100%
+  display: grid
+  grid-template-rows: 60px 700px 50px
+  grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr 1fr 90px
+  header
+    position: relative
+    grid-row: 1
+    grid-column: 1/9
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+    background: #fafafa
+    filter: drop-shadow(5px 15px 50px #98bfc4)
+    p
+      padding: 0px
+      font-weight: bold
+      text-align: center
+    a
+      text-decoration: none
+      color: #000000
+      transition: 0.2s
+    a:hover
+      color: #ca4141
+    .header_about:hover,.header_coaches:hover,.header_price:hover,.header_location:hover,.header_logo:hover,
+      background: #e7e7e7
+      border-radius: 5px
+    .header_about
+      grid-row: 1
+      grid-column: 2
+    .header_coaches
+      grid-row: 1
+      grid-column: 3
+    .header_price
+      grid-row: 1
+      grid-column: 4
+    .header_location
+      grid-row: 1
+      grid-column: 5
+    .header_phone
+      grid-row: 1
+      grid-column: 6
+  section.greetings
+    position: relative
+    grid-row: 2
+    grid-column: 1/9
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    .greetings_img
+      grid-row: 1/9
+      grid-column: 1/9
+      width: 100%
+      max-height: 100%
+      object-fit: fill
+    .greetings_txt_h1
+      grid-row: 3
+      grid-column: 2/8
+      color: #ffffff
+      font: 110px "Manrope"
+      font-weight: 200
+      text-align: center
+      margin: 0px
+    .greetings_txt_h3
+      grid-row: 4
+      grid-column: 2/8
+      color: #ffffff
+      font: 80px "Manrope"
+      text-align: center
+      margin: 0px
+    .greetings_button
+      grid-row: 7
+      grid-column: 4/6
+      width: 70%
+  footer
+    position: relative
+    grid-row: 3
+    grid-column: 1/9
+    display: grid
+    grid-template-rows: 1fr
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+    background: #98bfc4
+    p
+      padding: 0px
+      font-weight: bold
+      text-align: center
+    a:hover
+      color: #ca4141
+    .footer_about:hover,.footer_coaches:hover,.footer_price:hover,.footer_location:hover
+      background: #7d9ca0
+      border-radius: 5px
+    .footer_about
+      grid-column: 1
+    .footer_coaches
+      grid-column: 2
+    .footer_price
+      grid-column: 3
+    .footer_location
+      grid-column: 4
+    .footer_phone
+      grid-column: 5
+
+  
+    
+
+      

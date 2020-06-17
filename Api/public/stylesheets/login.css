@@ -1,0 +1,102 @@
+p {
+  font: 15px "Manrope"; }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.2s; }
+
+a:hover {
+  color: #000000;
+  transition: 0.2s; }
+
+body {
+  background: #fafafa; }
+
+input {
+  background: #fafafa;
+  border-radius: 45px;
+  border: 2px solid #a9746250;
+  font: 20px "Manrope";
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  margin: 0px auto;
+  outline: none; }
+
+button {
+  border-radius: 45px;
+  background: #fafafa;
+  border: 2px solid #ffffff5c;
+  color: #363636a7;
+  font: 20px "Manrope";
+  text-align: center;
+  margin: 0px auto;
+  user-select: none;
+  text-decoration: none;
+  outline: none;
+  transition: 0.2s;
+  width: 60%; }
+
+button:hover {
+  background: #fbb8a2;
+  border: 2px solid #ffffff5c;
+  color: #363636a7;
+  transition: 0.2s; }
+
+div.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10px 600px 10px;
+  grid-template-columns: 4fr 4fr 4fr; }
+  div.container div.reg_box {
+    grid-row: 2;
+    grid-column: 2;
+    background: #fdc5b2;
+    border-radius: 40px;
+    display: grid;
+    grid-template-rows: 10px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 10px;
+    grid-template-columns: 10px 1fr 10px; }
+    div.container div.reg_box .reg_text {
+      grid-row: 2;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .username {
+      grid-row: 3;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .name {
+      grid-row: 4;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .surname {
+      grid-row: 5;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .email {
+      grid-row: 6;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .phone {
+      grid-row: 7;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .parent {
+      grid-row: 8;
+      grid-column: 2;
+      margin: 0px auto;
+      text-align: center; }
+    div.container div.reg_box .form_parent_name {
+      margin: 0px auto; }
+    div.container div.reg_box .form_parent_surname {
+      margin: 0px auto; }
+    div.container div.reg_box .company {
+      grid-row: 9;
+      grid-column: 2;
+      margin: 0px auto; }
+    div.container div.reg_box .form_btn {
+      grid-row: 10;
+      grid-column: 2;
+      margin: 0px auto; }
+
+/*# sourceMappingURL=login.css.map */
