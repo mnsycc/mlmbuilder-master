@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  div(class="container")
+    header
+      div(class="header_logo")
+        p(class="header_registration")
+          a(class="reg"  href="/auth") LOG IN
+      div(class="header_about")
+        p(class="header_about_txt")
+          a(class="about" href="#about") ABOUT
+      div(class="header_coaches")
+        p(class="header_coaches_txt")
+          a(class="coaches" href="#coaches") COACHES
+      div(class="header_price")
+        p(class="header_price_txt")
+          a(class="price" href="#price") PRICE
+      div(class="header_location")
+        p(class="header_location_txt")
+          a(class="location" href="#location") LOCATION
+      div(class="header_phone")
+        p(class="header_phone_txt")
+          a(class="phone" href="tel:+380-xx-xxx-xxxx") +380-(xx)-xxx-xxxx
+    section(class="greetings")
+      img(class="greetings_img" src="/stylesheets/img/greetingsimg.jpg")
+      h1(class="greetings_txt_h1") Yoga Studio
+      h2(class="greetings_txt_h3") in Kiev
+      button(class="greetings_button button")
+        a(class="about" href="#about") See More
+    footer
+      div(class="footer_about")
+        p(class="footer_about_txt")
+          a(class="about" href="#about") ABOUT
+      div(class="footer_coaches")
+        p(class="footer_coaches_txt")
+          a(class="coaches" href="#coaches") COACHES
+      div(class="footer_price")
+        p(class="footer_price_txt")
+          a(class="price" href="#price") PRICE
+      div(class="footer_location")
+        p(class="footer_location_txt")
+          a(class="location" href="#location") LOCATION
+      div(class="footer_phone")
+        p(class="footer_phone_txt")
+          a(class="phone" href="tel:+380-xx-xxx-xxxx") +380-(xx)-xxx-xxxx
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+      

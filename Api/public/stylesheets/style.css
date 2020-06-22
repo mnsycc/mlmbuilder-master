@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("./fonts/Manrope-VariableFont_wght.ttf"); }
+
+p {
+  font: 15px "Manrope"; }
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.2s; }
+
+a:hover {
+  color: #000000;
+  transition: 0.2s; }
+
+button {
+  border-radius: 45px;
+  background: #ffcc9900;
+  border: 1px solid #ffffff5c;
+  font: 20px "Manrope";
+  text-align: center;
+  margin: 0px auto;
+  height: 60%;
+  user-select: none;
+  text-decoration: none;
+  outline: none;
+  transition: 0.2s; }
+
+button:hover {
+  background: #ffffff93;
+  border: 1px solid #ffffff5c;
+  transition: 0.2s; }
+
+.circle {
+  background: #fdc5b2;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  margin: 50px auto; }
+
+div.container {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 60px 700px 50px;
+  grid-template-columns: 90px 1fr 1fr 1fr 1fr 1fr 1fr 90px; }
+  div.container header {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1/9;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    background: #fafafa;
+    filter: drop-shadow(5px 15px 50px #98bfc4); }
+    div.container header p {
+      padding: 0px;
+      font-weight: bold;
+      text-align: center; }
+    div.container header a {
+      text-decoration: none;
+      color: #000000;
+      transition: 0.2s; }
+    div.container header a:hover {
+      color: #ca4141; }
+    div.container header .header_about:hover, div.container header .header_coaches:hover, div.container header .header_price:hover, div.container header .header_location:hover, div.container header .header_logo:hover {
+      background: #e7e7e7;
+      border-radius: 5px; }
+    div.container header .header_about {
+      grid-row: 1;
+      grid-column: 2; }
+    div.container header .header_coaches {
+      grid-row: 1;
+      grid-column: 3; }
+    div.container header .header_price {
+      grid-row: 1;
+      grid-column: 4; }
+    div.container header .header_location {
+      grid-row: 1;
+      grid-column: 5; }
+    div.container header .header_phone {
+      grid-row: 1;
+      grid-column: 6; }
+  div.container section.greetings {
+    position: relative;
+    grid-row: 2;
+    grid-column: 1/9;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+    div.container section.greetings .greetings_img {
+      grid-row: 1/9;
+      grid-column: 1/9;
+      width: 100%;
+      max-height: 100%;
+      object-fit: fill; }
+    div.container section.greetings .greetings_txt_h1 {
+      grid-row: 3;
+      grid-column: 2/8;
+      color: #ffffff;
+      font: 110px "Manrope";
+      font-weight: 200;
+      text-align: center;
+      margin: 0px; }
+    div.container section.greetings .greetings_txt_h3 {
+      grid-row: 4;
+      grid-column: 2/8;
+      color: #ffffff;
+      font: 80px "Manrope";
+      text-align: center;
+      margin: 0px; }
+    div.container section.greetings .greetings_button {
+      grid-row: 7;
+      grid-column: 4/6;
+      width: 70%; }
+  div.container footer {
+    position: relative;
+    grid-row: 3;
+    grid-column: 1/9;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    background: #98bfc4; }
+    div.container footer p {
+      padding: 0px;
+      font-weight: bold;
+      text-align: center; }
+    div.container footer a:hover {
+      color: #ca4141; }
+    div.container footer .footer_about:hover, div.container footer .footer_coaches:hover, div.container footer .footer_price:hover, div.container footer .footer_location:hover {
+      background: #7d9ca0;
+      border-radius: 5px; }
+    div.container footer .footer_about {
+      grid-column: 1; }
+    div.container footer .footer_coaches {
+      grid-column: 2; }
+    div.container footer .footer_price {
+      grid-column: 3; }
+    div.container footer .footer_location {
+      grid-column: 4; }
+    div.container footer .footer_phone {
+      grid-column: 5; }
+
+/*# sourceMappingURL=style.css.map */
