@@ -19,9 +19,14 @@ send.addEventListener('click', (ev) => {
     };
     const company = document.querySelector('.form_company').value;
 
+    const info = {
+      profile,
+      parent,
+      company,
+    };
     console.log(profile, parent, company);
     // eslint-disable-next-line no-undef
-    axios.post('/auth/login', profile, parent, company);
+    axios.post('/auth/login', info);
   };
   b();
 });

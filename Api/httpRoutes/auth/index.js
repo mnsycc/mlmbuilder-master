@@ -16,23 +16,26 @@ router.get('/', (req, res) => {
 
 router.post('/login', upload.none(), async (req, res) => {
   // создание профиля юзера
-  const { createProfile } = profileCtr;
+  const { createProfile } = await profileCtr;
   // console.log(req.body);
 
-  const uid = await createProfile(req.body);
+  const uid = await createProfile(req.body.profile);
   console.log('uid: ', uid);
+
+  // const { initParentTree } = treeCtr;
+  // const tree = await initParentTree(uid);
 
   // чтобы создать рефера, нужно передать в трии айди родтеля, юзера и компанию
 
-  const { getProfile } = profileCtr;
-  const parentId = await getProfile(req.body);
+  const { getProfile } = await profileCtr;
+  const parentId = await getProfile(req.body.parent);
 
   console.log('parentId: ', parentId);
 
-  // const { createReferal } = treeCtr;
-  // const referelID = await createReferal(parentId);
+  const { createReferal } = await treeCtr;
+  const referelId = await createReferal(uid, parentId);
 
-  // console.log(referelID);
+  console.log(referelId);
 });
 
 module.exports = router;
