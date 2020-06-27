@@ -5,13 +5,17 @@ const { Schema } = mongoose;
 
 const generalSchema = new Schema({ // Схема
   name: { type: Schema.Types.String },
-  users: {
-    type: Schema.Types.String,
+  users: [{
+    type: Schema.Types.ObjectId,
     ref: 'user',
-  },
+  }],
   treeType: {
     type: Schema.Types.String,
     enum: ['uniLevel', 'matrix', 'binary', 'stairStep'],
+  },
+  owner: {
+    type: Schema.Types.ObjectId,
+    ref: 'user',
   },
 }, { timestamps: true }); // Настройки схемы, в данном случае добавить поле createdAt, updatedAt (когда создали документ, когда обновили документ)
 

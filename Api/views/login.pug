@@ -13,14 +13,18 @@ block content
       div(class="email")
         input(type="email" name="email" value="" class="form_email" placeholder="Email")
       div(class="phone")
-        input(type="text" name="phone" value="" class="form_phone" placeholder="Phone")
+        input(type="tel" name="phone" value="" class="form_phone" placeholder="Phone")
       div(class="parent") Lead
         br
         input(type="text" name="parent" value="" class="form_parent_name" placeholder="Name")
         input(type="text" name="parent" value="" class="form_parent_surname" placeholder="Surname")
       div(class="company")
         br
-        input(type="text" name="company" value="" class="form_company" placeholder="Company")
+        input(type="text" name="company" value="" class="form_company_name" placeholder="Name of company")
+        input(type="radio" name="type" value="uniLevel" id="form_company_type_uniLevel" class="form_company_type")
+        label(for="form_company_type_linear") Linear
+        input(type="radio" name="type" value="binary" id="form_company_type_binary" class="form_company_type")
+        label(for="form_company_type_binary") Binary
       button(type="submit" name="button" class="form_btn") Submit
   link(rel='stylesheet', href='/stylesheets/login.css')
   script(src='/javascripts/main.js')

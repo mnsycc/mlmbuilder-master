@@ -17,14 +17,17 @@ send.addEventListener('click', (ev) => {
       name: document.querySelector('.form_parent_name').value,
       surname: document.querySelector('.form_parent_surname').value,
     };
-    const company = document.querySelector('.form_company').value;
+    const company = {
+      name: document.querySelector('.form_company_name').value,
+      type: document.querySelector('.form_company_type').value,
+    };
 
     const info = {
       profile,
       parent,
       company,
     };
-    console.log(profile, parent, company);
+    console.log(info);
     // eslint-disable-next-line no-undef
     axios.post('/auth/login', info);
   };

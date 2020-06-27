@@ -10,6 +10,7 @@ const generalSchema = new Schema({ // Схема
       default: '',
       minLength: 0,
       maxLength: 255,
+      unique: true,
     },
     name: {
       type: Schema.Types.String,
