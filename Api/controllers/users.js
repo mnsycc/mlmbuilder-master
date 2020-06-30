@@ -35,7 +35,7 @@ const getProfile = async (profile) => {
   const doc = await UserModel.find(query);
   const uid = doc.map((value) => {
     return value.id;
-  }).join();
+  });
   return uid;
 };
 
@@ -66,7 +66,7 @@ const getCompany = async (company) => {
   const doc = await CompanyModel.find(query);
   const companyId = doc.map((value) => {
     return value.id;
-  }).join();
+  });
   return companyId;
 };
 
@@ -79,7 +79,7 @@ const getParent = async (parent) => {
   const doc = await UserModel.find(query);
   const uid = doc.map((value) => {
     return value.id;
-  }).join();
+  });
   return uid;
 };
 
@@ -104,14 +104,17 @@ const getParent = async (parent) => {
 const createReferal = async (uid, parentId, companyId) => {
   // Нужен будеть чтобы узнать как распределить реферала в структуре. Пока делаем ток линейный.
   // const { treeType } = await CompanyModel.findById(companyId, 'treeType');
-  console.log('parentId:', parentId);
-  // находим родителя в структуре
-  const parentDoc = await TreeModel.findOne({ user: parentId }, '_id referTree');
-  console.log('parentDoc:', parentDoc);
-  // берем реферТрее от родителя, добавляем к нему айди родителя и получим рефер трии для регистрируемого реферала
-  const childTree = [...parentDoc.referTree, parentDoc.id];
 
-  // Добавим информацио о человеке в пользователе в компанию
+  // находим родителя в структуре
+  const parentDoc = await TreeModel.findOne({ user: parentId }, '_id referTree parentTree');
+  console.log('parentDoc: ', parentDoc);
+
+  // берем реферТрее от родителя, добавляем к нему айди родителя и получим рефер трии для регистрируемого реферала
+  const childTree = [...parentDoc.referTree, parentDoc.id, parentDoc.parentTree];
+
+  // Добавим информацио о человеке
+
+  const array = parentDoc.parentTree.concat(parentId);
 
   await parentDoc.updateOne({
     $push: { referTree: uid },
@@ -123,6 +126,7 @@ const createReferal = async (uid, parentId, companyId) => {
 
   // создаем реферала
   const childDoc = await new TreeModel({
+    parentTree: array,
     referTree: [],
     user: uid,
     company: companyId,
