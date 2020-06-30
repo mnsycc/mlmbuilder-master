@@ -8,6 +8,10 @@ const generalSchema = new Schema({ // Схема
     type: Schema.Types.ObjectId,
     ref: 'tree',
   }],
+  parentTree: [{
+    type: Schema.Types.ObjectId,
+    ref: 'tree',
+  }],
   user: {
     type: Schema.Types.ObjectId,
     ref: 'user',
